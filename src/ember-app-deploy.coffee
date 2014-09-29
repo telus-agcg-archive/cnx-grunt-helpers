@@ -110,14 +110,14 @@ module.exports = {
     relativePath = 'cnx-grunt-helpers/node_modules'
     grunt.loadNpmTasks("#{relativePath}/grunt-shell")
     grunt.loadNpmTasks("#{relativePath}/grunt-redis-manifest")
+    grunt.loadNpmTasks("#{relativePath}/grunt-s3")
+    grunt.loadNpmTasks("#{relativePath}/grunt-hashres")
+    grunt.loadNpmTasks("#{relativePath}/grunt-cdn")
 
     # Default task(s). flag can be '-prod' or '-p'
     target = if grunt.option('prod') or grunt.option('p') then 'prod' else 'dev'
 
     if target is 'prod'
-      grunt.loadNpmTasks("#{relativePath}/grunt-s3")
-      grunt.loadNpmTasks("#{relativePath}/grunt-hashres")
-      grunt.loadNpmTasks("#{relativePath}/grunt-cdn")
       grunt.registerTask taskName, [ "shell:#{target}"
                                       'hashres'
                                       'cdn'
