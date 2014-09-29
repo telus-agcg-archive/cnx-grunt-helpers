@@ -107,7 +107,7 @@ module.exports = {
     config
   ),
   registerTask: ((grunt, taskName = 'default') ->
-    relativePath = 'cnx-grunt-helpers/node_modules'
+    relativePath = 'node_modules'
     grunt.loadNpmTasks("#{relativePath}/grunt-shell")
     grunt.loadNpmTasks("#{relativePath}/grunt-redis-manifest")
 
