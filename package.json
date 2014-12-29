@@ -21,5 +21,6 @@
   "devDependencies": {
     "chai": "~1.9.1",
     "mocha": "~1.21.4"
-  }
+  },
+  "repository": "https://github.com/connexio-labs/cnx-grunt-helpers.git"
 }
